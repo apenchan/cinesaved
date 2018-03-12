@@ -25,7 +25,7 @@ var moviesController = require('./routes/mainRoute');
 app.use('/movies', moviesController)
 
 // app.use('/movies', mainRoute);
-app.use('/', authRoute);
+app.use('/auth', authRoute);
 
 // app.post('/register', function (req, res){
 // 	User.create(req.body, function(err, user){
@@ -38,6 +38,12 @@ app.use('/', authRoute);
 // 	});
 // });
 
+// app.post('/login', 
+// passport.authenticate('local', { failureRedirect: '/login' }),
+// function(req, res) {
+//   res.redirect('/');
+//   res.send("logged in")
+// });
 
 app.get('/movie/:id/movie', function (req, res) {
   console.log('user id: ' + req.params.id);

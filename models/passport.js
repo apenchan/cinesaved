@@ -1,7 +1,7 @@
-var User = require('../models/userModel.js');
-var passport = require('passport');
-var config = require('../config.js');
+var User = require('./userModel.js');
 var LocalStrategy = require('passport-local').Strategy;
+const passport = require('passport')
+const bcrypt = require('bcrypt')
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
 var JwtOpts = {};
@@ -15,7 +15,6 @@ JwtOpts.jwtFromRequest = function(req) {
   return token;
 };
 
-//Remove this before deploy
 JwtOpts.secretOrKey = process.env.JWT_SECRET || "1234";
 
 
@@ -40,13 +39,15 @@ passport.use(new JwtStrategy(JwtOpts, function(jwt_payload, done) {
 passport.use( new LocalStrategy(
   function(username, password, done ) {
     console.log('I got this')
-    User.findOne({ username: username }, function( err, dbUser ) {
+    User.findOne({ username: username}, function( err, dbUser ) {
+      console.log(username)
+      console.log(dbUser)
       if (err) { 
         return done(err); }
       if (!dbUser) {
         return done(null, false);
       }
-      if (!dbUser.authenticate(password)) {
+      if (!dbUser.verifyPassword(password)) {
         return done(null, false);
       }
 
@@ -63,13 +64,8 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-// passport.use(User.createStrategy()); // local strategy
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
-
 
 module.exports = passport;
-
 
 
 
