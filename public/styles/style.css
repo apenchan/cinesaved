@@ -1,0 +1,237 @@
+@font-face{
+    font-family: "LemonMilkbold.otf";
+    src: url("../fonts/LemonMilkbold.otf");
+}
+@font-face{
+    font-family: "TheBrooklynBold.otf";
+    src: url("../fonts/TheBrooklynBold.otf");
+}
+@font-face{
+    font-family: "theboldfont.ttf";
+    src: url("../fonts/theboldfont.ttf");
+
+}
+@font-face{
+    font-family: "CODEBold.otf";
+    src: url("../fonts/CODEBold.otf");
+}
+@font-face {
+    font-family: "NOVABOLD.otf";
+    src: url("../fonts/NOVABOLD.otf");
+}
+@font-face {
+    font-family: "couture-bld.otf";
+    src: url("../fonts/couture-bld.otf");
+}
+@font-face{
+    font-family: "Existence-Light.ttf";
+    src: url("../fonts/Existence-Light.ttf")
+}
+*{
+    margin: 0;
+}
+body{
+    /* background: url("https://i.ytimg.com/vi/EZ7la-hMNuk/maxresdefault.jpg");
+    background-color: #f1f1f1; */
+}
+#main-section{
+    height: 100vh;
+}
+#home-section-one{
+    background: url("../assests/jakob-owens-199505.jpg");
+    background-size: cover; 
+    height: 100%;
+    width: 100%;
+    padding-top: 8%;
+}
+.section-one-p{
+    margin: 0;
+    font-family: "couture-bld.otf";
+    display: inline-block;
+    text-align: center;
+    font-size: 50px;
+    width: 1000px;
+    margin: 3%;
+    padding-left: 21%;
+    /* background-attachment: fixed; */
+    /* text-align: center; */
+    color: white;
+    font-weight: bold;
+}
+.section-one-p-one{
+    font-family: "NOVABOLD.otf";
+    font-size: 30px;
+    color: white;
+    float: right;
+    padding-right: 20px;
+    margin: 3%;
+    padding-top: 15%;
+    width: 390px;
+
+}
+#home-section-two{
+    background: url("../assests/lloyd-dirks-74271.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    padding-top: 7%;
+}
+.section-two-p{
+    font-family: "couture-bld.otf";
+    display: inline-block;
+    font-size: 50px;
+    color: white;
+    width: 720px;
+    margin-right: 16%;
+    margin-left: 18%;
+    position: relative;
+}
+#home-section-three{
+    background: url("../assests/georgia-vagim-381292.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: 0px -60px;
+    background-attachment: fixed;
+    padding-top: 7%;
+}
+.section-three-p{
+    color: white;
+    margin: 3%;
+    font-size: 40px;
+    margin-top: 0%;
+    font-family: "couture-bld.otf";
+}
+.main-top-search{
+    padding-top: 5px;
+    width: 62%;
+    display: inline-block;
+    text-align: center;
+}
+.search-top-input{
+    width: 50%;
+}
+.user-info-bar{
+    float: right;
+    margin-right: 5%;
+}
+.headline-nav{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    z-index: 150;
+    box-shadow: 5px 5px 5px #999; 
+    -moz-box-shadow: 5px 5px 5px #999;
+    -webkit-box-shadow: 5px 5px 5px #999;
+}
+.main-logo{
+    font-family: "couture-bld.otf";
+    font-size: 30px;
+    color: #255c74;
+    padding-left: 30px;
+    padding-top: 5px;
+
+}
+.btn-primary{
+    background-color:#255c74; 
+}
+.navbar-text{
+    font-family: "couture-bld.otf";
+    color: #255c74;
+    font-size: 15px;
+}
+.movie-collection{
+    height: 100vh;
+    /* background: url("http://bit.ly/2jRMKOH") */
+}
+.if-no-movies{
+    text-align: center;
+    font-size: 20px;
+    font-family: "couture-bld.otf";
+    margin: 5%;
+}
+.search-title-all{
+    padding: 1%;
+}
+.saved-collection{
+    /* position: relative; */
+    margin-top: 30px;
+    height: 50vh;
+}
+.form-group{
+    padding-left: 1%;
+}
+.form-control{
+	display: inline-block;
+}
+.testSaved{
+    background-color: red;
+}
+
+/* .saved-collection{
+    background-color: red;
+    padding-top: 15px;
+} */
+.search-my-saved{
+    padding-top: 36px;
+}
+.search-my-saved-input{
+    width: 25%;
+}
+.search-title-all-input{
+    width: 25%;
+}
+.movies{
+    overflow: hidden;
+    width: 100%;
+}
+.movie{
+    float: left;
+    width: 25%;
+}
+img.movie-img{
+    height: 300px;
+    width: 330px;
+    margin-left: 20px;
+    padding-top: 8%;
+    z-index: 10;
+}
+.show-movie-info:hover {
+    filter: none;
+    -webkit-filter: grayscale(68%);
+    opacity: .4;
+    transform: scale(1.15);
+    display: block;
+    /* padding-top: 5.5%; */
+    z-index: 10;
+}
+.search-other-movies-input{
+    width:25%;
+}
+.show-movie-info{
+    position: relative;
+    text-shadow: 1px 1px 8px black; 
+    font-size: 20px; 
+}
+.show-movie-info.ng-hide{
+    opacity: 0;
+}
+.show-info{
+    position: absolute;
+    bottom: 8px; 
+    padding-left: 26px;
+    color: #F8F6F6;
+} 
+.search-other-movies{
+    padding: 1%;
+}
+.imdb-movies{
+    padding: 20px;
+}
+.movie-description{
+    font-size: 10px;
+    width: 300px;
+    /* height: 100px; */
+}
